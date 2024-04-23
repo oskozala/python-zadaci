@@ -19,9 +19,7 @@ n = int(input())
 print(45 - n)
 ```
 
-Kako znamo što se od nas traži, program u ovom obliku nam je jasan. No, kod mora biti čitljiv i nekome tko ne zna što se od nas traži. Usporedi kod iznad s kodom na poveznici ispod.
-
-[kasnjenje.py](https://github.com/oskozala/python-zadaci/blob/main/rjesenja/kasnjenje.py)
+Kako znamo što se od nas traži, program u ovom obliku nam je jasan. No, kod mora biti čitljiv i nekome tko ne zna što se od nas traži. Usporedi kod iznad s kodom u datoteci [kasnjenje.py](https://github.com/oskozala/python-zadaci/blob/main/rjesenja/kasnjenje.py).
 
 Ova dva programa rade na potpuno isti način, jedina razlika je čitljivost koda. ***Čitljivije*** je uvijek ***bolje***, inače bismo mogli napisati program i ovako:
 
@@ -72,9 +70,7 @@ else:
 
 U ovom smo primjeru krenuli od prvog stupca. Kako bi postavili uvjet ako smo prvo htjeli "riješiti" ove iz drugog stupca?
 
-Usporedi kod iznad s kodom na poveznici ispod:
-
-[izbori.py](https://github.com/oskozala/python-zadaci/blob/main/rjesenja/izbori.py)
+Usporedi kod iznad s kodom u datoteci [izbori.py](https://github.com/oskozala/python-zadaci/blob/main/rjesenja/izbori.py).
 
 *Jesmo li mogli umjesto `dob >= 18` koristiti `dob > 17`? Nije li to isto, ako govorimo o prirodnim brojevima?*
 
