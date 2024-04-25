@@ -165,7 +165,7 @@ Cijeli kod pogledaj [ovdje](https://github.com/oskozala/python-zadaci/blob/main/
 
 Kao što vidimo iz primjera, program nas mora pitati da unesemo tri podatka, jedan po jedan.
 
-Kako bi pojednostavili ovaj zadatak, unosit ćemo godinu rođenja kao *broj* bez točke.
+Kako bi pojednostavili ovaj zadatak, godina rođenja unijet ćemo bez točke.
 
 ```python
 ime = input()
@@ -177,6 +177,7 @@ Svaki veći problem se može podijeliti na više manjih pa ćemo i mi to ovdje n
 1. naći ćemo inicijale (s točkama),
 2. izračunat ćemo godine starosti,
 3. spojit ćemo te podatke s potrebnim znakovima (zagrade) i na kraju ispisati.
+
 
 ***1. Inicijali***
 
@@ -190,6 +191,7 @@ inicijali = ime[0] + "." + prezime[0] + "."
 
 *Prisjetimo se da operator `+` spaja sve podatke tipa `str`, tj. one koje sadrže tekst.*
 
+
 ***2. Dob***
 
 Godine starosti ćemo jednostavno izračunati.
@@ -198,6 +200,43 @@ Godine starosti ćemo jednostavno izračunati.
 dob = 2024 - godina_rodjenja
 ```
 
+**3. Spajanje i formatiranje teksta**
+
+Zasad imamo varijablu `inicijali` u kojoj je primjerice `L.M.` i imamo varijablu `dob` gdje je pohranjen broj `39`.
+
+Spajajući to s ostalim znakovima, niz može izgledati ovako:
+
+`L.M.` ` (` `39` `)` 👈 *Zagrade su spojene s brojem, a prije prve zagrade je razmak*
+
+Već znamo kako se spajaju *stringovi* u Pythonu:
+
+```python
+  zasticeni_podaci = inicijali + " (" + dob + ")"
+```
+
+Izvrsno smo to zamislili, zar ne? Problem je jedino što Python neće biti zadovoljan, a reći će nam i zašto:
+
+```pycon
+TypeError: can only concatenate str (not "int") to str
+```
+
+*U prijevodu to znači da se u niz mogu spajati `str` i `str`, ali ne i `str` i `int`.*
+
+Srećom, kao što možemo pretvoriti tekst u broj, možemo učiniti i obrnuto:
+
+```pycon
+>>> int('5')
+5
+>>> str(5)
+'5'
+```
+
+Stoga ćemo varijablu `dob` pretvoriti u tekstni zapis pomoću funkcije `str()` te nas Python više neće opominjati. 😌
+
+```diff
+-  zasticeni_podaci = inicijali + " (" + dob + ")"
++  zasticeni_podaci = inicijali + " (" + str(dob) + ")"
+```
 
   <hr />
 </details>
