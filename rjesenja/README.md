@@ -159,3 +159,58 @@ Cijeli kod pogledaj [ovdje](https://github.com/oskozala/python-zadaci/blob/main/
 
   <hr />
 </details>
+
+<details>
+  <summary><em>4. Inicijali</em></summary>
+
+Kao što vidimo iz primjera, program nas mora pitati da unesemo tri podatka, jedan po jedan.
+
+Kako bi pojednostavili ovaj zadatak, unosit ćemo godinu rođenja kao *broj* bez točke.
+
+```python
+ime = input()
+prezime = input()
+godina_rodjenja = int(input())
+```
+
+Svaki veći problem se može podijeliti na više manjih pa ćemo i mi to ovdje napraviti, primjerice ovako:
+1. naći ćemo inicijale (s točkama),
+2. izračunat ćemo godine starosti,
+3. spojit ćemo te podatke s potrebnim znakovima (zagrade) i na kraju ispisati.
+
+***1. Inicijali***
+
+Kako bismo dobili inicijale (s točkama) moramo napraviti nekoliko stvari:
+- "izvući" ćemo samo prva slova iz varijabli `ime` i `prezime` (koristeći se uglatim zagradama kao prethodnom zadatku) i
+- umetnuti točke nakon oba slova.
+
+```python
+inicijali = ime[0] + "." + prezime[0] + "."
+```
+
+*Prisjetimo se da operator `+` spaja sve podatke tipa `str`, tj. one koje sadrže tekst.*
+
+***2. Dob***
+
+Godine starosti ćemo jednostavno izračunati.
+
+```python
+dob = 2024 - godina_rodjenja
+```
+
+
+  <hr />
+</details>
+
+<details>
+  <summary><em>5. Sigma</em></summary>
+
+  <hr />
+</details>
+
+<details>
+  <summary><em>6. Znamenke (2)</em></summary>
+
+  <hr />
+</details>
+
