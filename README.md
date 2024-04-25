@@ -46,7 +46,21 @@ Napiši program koji će zbrojiti znamenke bilo kojeg prirodnog troznamenkastog 
 ___
 
 
-## *4. Sigma*
+## *4. Inicijali*
+
+Napiši program koji će zaštititi nečije privatne podatke tako da mu se ime, prezime i godina rođenja prikažu u obliku inicijala i godina starosti u zagradama.
+
+*Za pravilni oblik ispisa pogledaj primjere.*
+
+|         | **Primjer 1.**               | **Primjer 2.**              |
+|---------|------------------------------|-----------------------------|
+| *Ulaz*  | `Luka`<br>`Modrić`<br>`1985` | `Mišo`<br>`Kovač`<br>`1941` |
+| *Izlaz* | `L.M. (39)`                  | `M.K. (83)`                 |
+
+___
+
+
+## *5. Sigma*
 
 Napiši program koji će zbrojiti prvih `n` prirodnih brojeva.
 
@@ -58,7 +72,7 @@ Napiši program koji će zbrojiti prvih `n` prirodnih brojeva.
 ___
 
 
-## *5. Znamenke (2)*
+## *6. Znamenke (2)*
 
 Napiši program koji će zbrojiti znamenke bilo kojeg prirodnog broja.
 
