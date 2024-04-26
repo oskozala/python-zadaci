@@ -175,6 +175,14 @@ Stoga ćemo varijablu `dob` pretvoriti u tekstni zapis pomoću funkcije `str()` 
 +  zasticeni_podaci = inicijali + " (" + str(dob) + ")"
 ```
 
+Preostaje nam samo ispisati ovako skrojeni *string*:
+
+```python
+print(zasticeni_podaci)
+```
+
+*Funkciju `str` mogli smo upotrijebiti i pri samom računanju varijable `dob`, kao što se to vidi u datoteci [inicijali.py](https://github.com/oskozala/python-zadaci/blob/main/rjesenja/inicijali.py).*
+
   <hr />
 </details>
 
