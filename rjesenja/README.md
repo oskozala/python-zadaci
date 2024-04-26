@@ -266,7 +266,7 @@ Cijeli kod pogledaj [ovdje](https://github.com/oskozala/python-zadaci/blob/main/
 <!--                    SIGMA -->
 
 <details>
-  <summary><em>6. Sigma</em></summary>
+  <summary><em>5. Sigma</em></summary>
   <hr />
 
 Kako bismo riješili ovaj zadatak napamet ili na papiru?
@@ -342,7 +342,7 @@ print(zbroj)
 <!--                    ZNAMENKE 2 -->
 
 <details>
-  <summary><em>5. Znamenke (2)</em></summary>
+  <summary><em>6. Znamenke (2)</em></summary>
   <hr />
 
 U prethodnom zadatku imali smo zgodno ograničenje da uneseni broj mora imati točno tri znamenke.
