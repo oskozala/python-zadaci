@@ -4,8 +4,9 @@
 2. [Izbori](README.md#2-izbori)
 3. [Inicijali](README.md#3-inicijali)
 4. [Znamenke (1)](README.md#4-znamenke-1)
-5. [Znamenke (2)](README.md#5-znamenke-2)
-6. [Sigma](README.md#6-sigma)
+5. [Sigma](README.md#5-sigma)
+6. [Znamenke (2)](README.md#6-znamenke-2)
+
 
 ## *1. Kašnjenje*
 
@@ -60,7 +61,19 @@ Napiši program koji će zbrojiti znamenke bilo kojeg prirodnog troznamenkastog 
 ___
 
 
-## *5. Znamenke (2)*
+## *5. Sigma*
+
+Napiši program koji će zbrojiti prvih `n` prirodnih brojeva.
+
+|         | **Primjer 1.** | **Primjer 2.** | **Primjer 3.** |
+|---------|----------------|----------------|----------------|
+| *Ulaz*  | `3`            | `7`            | `10`           |
+| *Izlaz* | `6`            | `28`           | `55`           |
+
+___
+
+
+## *6. Znamenke (2)*
 
 Napiši program koji će zbrojiti znamenke bilo kojeg prirodnog broja.
 
@@ -71,14 +84,3 @@ Napiši program koji će zbrojiti znamenke bilo kojeg prirodnog broja.
 
 ___
 
-
-## *6. Sigma*
-
-Napiši program koji će zbrojiti prvih `n` prirodnih brojeva.
-
-|         | **Primjer 1.** | **Primjer 2.** | **Primjer 3.** |
-|---------|----------------|----------------|----------------|
-| *Ulaz*  | `3`            | `7`            | `10`           |
-| *Izlaz* | `6`            | `28`           | `55`           |
-
-___
