@@ -1,5 +1,9 @@
 # Rješenja zadataka
 
+
+
+<!--                    KAŠNJENJE -->
+
 <details>
   <summary><em>1. Kašnjenje</em></summary>
   <hr />
@@ -32,6 +36,10 @@ print(45 - int(input()))
 
   <hr />
 </details>
+
+
+
+<!--                    IZBORI -->
 
 <details>
   <summary><em>2. Izbori</em></summary>
@@ -84,8 +92,99 @@ Je, isto je i program bi se isto i izvodio. Pitanje je jedino što je jasnije ne
   <hr />
 </details>
 
+
+
+<!--                    INICIJALI -->
+
 <details>
-  <summary><em>3. Znamenke (1)</em></summary>
+  <summary><em>3. Inicijali</em></summary>
+  <hr />
+
+Kao što vidimo iz primjera, program nas mora pitati da unesemo tri podatka, jedan po jedan.
+
+Kako bi pojednostavili ovaj zadatak, godina rođenja unijet ćemo bez točke.
+
+```python
+ime = input()
+prezime = input()
+godina_rodjenja = int(input())
+```
+
+Svaki veći problem se može podijeliti na više manjih pa ćemo i mi to ovdje napraviti, primjerice ovako:
+1. naći ćemo inicijale (s točkama),
+2. izračunat ćemo godine starosti,
+3. spojit ćemo te podatke s potrebnim znakovima (zagrade) i na kraju ispisati.
+
+
+***1. Inicijali***
+
+Kako bismo dobili inicijale (s točkama) moramo napraviti nekoliko stvari:
+- "izvući" ćemo samo prva slova iz varijabli `ime` i `prezime` (koristeći se uglatim zagradama kao prethodnom zadatku) i
+- umetnuti točke nakon oba slova.
+
+```python
+inicijali = ime[0] + "." + prezime[0] + "."
+```
+
+*Prisjetimo se da operator `+` spaja sve podatke tipa `str`, tj. one koje sadrže tekst.*
+
+
+***2. Dob***
+
+Godine starosti ćemo jednostavno izračunati.
+
+```python
+dob = 2024 - godina_rodjenja
+```
+
+**3. Spajanje i formatiranje teksta**
+
+Zasad imamo varijablu `inicijali` u kojoj je primjerice `L.M.` i imamo varijablu `dob` gdje je pohranjen broj `39`.
+
+Spajajući to s ostalim znakovima, niz može izgledati ovako:
+
+`L.M.` ` (` `39` `)` 👈 *Zagrade su spojene s brojem, a prije prve zagrade je razmak*
+
+Već znamo kako se spajaju *stringovi* u Pythonu:
+
+```python
+  zasticeni_podaci = inicijali + " (" + dob + ")"
+```
+
+Izvrsno smo to zamislili, zar ne? Problem je jedino što Python neće biti zadovoljan, a reći će nam i zašto:
+
+```pycon
+TypeError: can only concatenate str (not "int") to str
+```
+
+*U prijevodu to znači da se u niz mogu spajati `str` i `str`, ali ne i `str` i `int`.*
+
+Srećom, kao što možemo pretvoriti tekst u broj, možemo učiniti i obrnuto:
+
+```pycon
+>>> int('5')
+5
+>>> str(5)
+'5'
+```
+
+Stoga ćemo varijablu `dob` pretvoriti u tekstni zapis pomoću funkcije `str()` te nas Python više neće opominjati. 😌
+
+```diff
+-  zasticeni_podaci = inicijali + " (" + dob + ")"
++  zasticeni_podaci = inicijali + " (" + str(dob) + ")"
+```
+
+  <hr />
+</details>
+
+
+
+<!--                    ZNAMENKE 1 -->
+
+<details>
+  <summary><em>4. Znamenke (1)</em></summary>
+  <hr />
 
 Program nas pita da unesemo neki troznamenkasti broj, a naučili smo da se u Pythonu to radi ovako, zar ne?
 
@@ -132,6 +231,8 @@ zbroj = znamenka_1 + znamenka_2 + znamenka_3
 
 No, ako ih zbrojimo u ovom obliku, Python će nam opet vratiti troznamenkasti broj. Zašto? 🤔
 
+*Odgovor slijedi, ali se krije i u prethodnom zadatku.* 😉
+
 Razlog je što Python operator `+` koristi na nekoliko načina. Ukucajmo nekoliko operacija u Pythonovu konzolu pa će nam biti jasnije:
 
 ```pycon
@@ -159,3 +260,114 @@ Cijeli kod pogledaj [ovdje](https://github.com/oskozala/python-zadaci/blob/main/
 
   <hr />
 </details>
+
+
+
+<!--                    SIGMA -->
+
+<details>
+  <summary><em>6. Sigma</em></summary>
+  <hr />
+
+Kako bismo riješili ovaj zadatak napamet ili na papiru?
+
+Krenuli bi od početka, zbrajali broj po broj i pamtili (ili zapisivali) svaki rezultat, a zadnji rezultat je ujedno i konačno rješenje.
+
+Ako, primjerice, moramo zbrojiti prvih pet prirodnih brojeva (1 + 2 + 3 + 4 + 5), postupak bi bio sličan ovome:
+
+1 + 2 = 3, 3 + 3 = 6, 6 + 4 = 10, 10 + 5 = 15.
+
+Rasporedimo ove brojeve u tablicu da postupak bude pregledniji:
+
+| | | | |
+|----|-----:|----:|-----:|
+| 1. |  ***`1`*** | `2` |        `3` |
+| 2. |        `3` | `3` |        `6` |
+| 3. |        `6` | `4` |       `10` |
+| 4. |       `10` | `5` | ***`15`*** |
+
+Ako postavimo rješenje na ovaj način, krećemo od broja `1` te nam ostaje još **četiri** broja za zbrajanje.
+
+Započnimo program unosom nekog prirodnog broja:
+
+```python
+n = int(input())
+```
+
+Nadalje, kao što vidimo iz tablice, zbroj jednog reda (3. stupac) početna je vrijednost sljedećeg (1. stupac).
+
+Dakle, potrebna nam je varijabla koja će prenositi vrijednosti iz kruga u krug. Nazovimo je `zbroj`, a početna vrijednost je `1`.
+
+```python
+zbroj = 1
+```
+
+Iz tablice također vidimo da će nam biti potrebna četiri kruga, a vrijednosti s kojima zbrajamo idu redom (2. stupac).
+
+Petlju s tim vrijednostima je lako složiti: početna vrijednost je `2`, a krajnja za jedan više od broja koji smo unijeli na početku, u ovom slučaju `6`.
+
+```python
+for i in range(2, n + 1):
+```
+
+No što će se događati u svakom krugu?
+
+Vidimo da se 3. stupac prenosi u 1., dakle potrebno je varijablu `zbroj` zbrojiti sa sljedećim brojem u nizu (u ovom slučaju naći ćemo ga u brojaču `i`) i to spremiti nazad u istu varijablu:
+
+```python
+  zbroj = zbroj + i
+```
+
+Iako ovo nikako nije netočno, Python (kao i mnogi drugi programski jezici) nudi nam kraći način pisanja iste ove operacije.
+
+Na hrvatskom možemo, umjesto "zbroji s" `i` i spremi rezultat u istu varijablu, reći naprosto ***uvećaj za*** `i`:
+
+```python
+  zbroj += i
+```
+
+Kad petlja završi, kao i na papiru, rezultat zadnjeg zbrajanja je ujedno i rješenje:
+
+```python
+print(zbroj)
+```
+
+*Jedno od mogućih rješenja je i krenuti od nule. Ne mijenja nam rezultat, ali nam mijenja broj krugova. Usporedi objašnjenje ovog zadatka s kodom u datoteci [sigma.py](https://github.com/oskozala/python-zadaci/blob/main/rjesenja/sigma.py).*
+
+  <hr />
+</details>
+
+
+
+<!--                    ZNAMENKE 2 -->
+
+<details>
+  <summary><em>5. Znamenke (2)</em></summary>
+  <hr />
+
+U prethodnom zadatku imali smo zgodno ograničenje da uneseni broj mora imati točno tri znamenke.
+
+Što se događa kad se to ograničenje ukloni? Kad uneseni broj može imati jednu ili šest ili pak tisuću znamenki?
+
+Moramo se, naravno, poslužiti petljom.
+
+Koliko će krugova imati ta petlja? Onoliko koliko uneseni broj ima znamenaka, očito. 😏
+
+Tu nam može pomoći funkcija `len()` (skraćeno od *length* - duljina).
+
+```pycon
+>>> len("12345")
+5
+>>> skola = 'O.Š. Kozala'
+>>> len(skola)
+11
+```
+
+Rješenje slijedi naknadno... 😉
+
+  <hr />
+</details>
+
+
+
+
