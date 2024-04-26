@@ -2,9 +2,10 @@
 
 1. [Kašnjenje](README.md#1-kasnjenje)
 2. [Izbori](README.md#2-izbori)
-3. [Znamenke (1)](README.md#3-znamenke-1)
-4. [Sigma](README.md#4-sigma)
+3. [Inicijali](README.md#3-inicijali)
+4. [Znamenke (1)](README.md#4-znamenke-1)
 5. [Znamenke (2)](README.md#5-znamenke-2)
+6. [Sigma](README.md#6-sigma)
 
 ## *1. Kašnjenje*
 
@@ -33,20 +34,7 @@ Napiši program koji će Ivanu ispisati poruku `GLASUJ` ukoliko je punoljetan, a
 
 ___
 
-
-## *3. Znamenke (1)*
-
-Napiši program koji će zbrojiti znamenke bilo kojeg prirodnog troznamenkastog broja.
-
-|         | **Primjer 1.** | **Primjer 2.** |
-|---------|----------------|----------------|
-| *Ulaz*  | `124`          | `942`          |
-| *Izlaz* | `7`            | `15`           |
-
-___
-
-
-## *4. Inicijali*
+## *3. Inicijali*
 
 Napiši program koji će zaštititi nečije privatne podatke tako da mu se ime, prezime i godina rođenja prikažu u obliku inicijala i godina starosti u zagradama.
 
@@ -60,7 +48,31 @@ Napiši program koji će zaštititi nečije privatne podatke tako da mu se ime, 
 ___
 
 
-## *5. Sigma*
+## *4. Znamenke (1)*
+
+Napiši program koji će zbrojiti znamenke bilo kojeg prirodnog troznamenkastog broja.
+
+|         | **Primjer 1.** | **Primjer 2.** |
+|---------|----------------|----------------|
+| *Ulaz*  | `124`          | `942`          |
+| *Izlaz* | `7`            | `15`           |
+
+___
+
+
+## *5. Znamenke (2)*
+
+Napiši program koji će zbrojiti znamenke bilo kojeg prirodnog broja.
+
+|         | **Primjer 1.** | **Primjer 2.** | **Primjer 3.** |
+|---------|----------------|----------------|----------------|
+| *Ulaz*  | `124`          | `2795`         | `10`           |
+| *Izlaz* | `7`            | `23`           | `1`            |
+
+___
+
+
+## *6. Sigma*
 
 Napiši program koji će zbrojiti prvih `n` prirodnih brojeva.
 
@@ -70,14 +82,3 @@ Napiši program koji će zbrojiti prvih `n` prirodnih brojeva.
 | *Izlaz* | `6`            | `28`           | `55`           |
 
 ___
-
-
-## *6. Znamenke (2)*
-
-Napiši program koji će zbrojiti znamenke bilo kojeg prirodnog broja.
-
-|         | **Primjer 1.** | **Primjer 2.** | **Primjer 3.** |
-|---------|----------------|----------------|----------------|
-| *Ulaz*  | `124`          | `2795`         | `10`           |
-| *Izlaz* | `7`            | `23`           | `1`            |
-
