@@ -5,7 +5,8 @@
 3. [Inicijali](README.md#3-inicijali)
 4. [Znamenke (1)](README.md#4-znamenke-1)
 5. [Sigma](README.md#5-sigma)
-6. [Znamenke (2)](README.md#6-znamenke-2)
+6. [Nađi slovo](README.md#6-nađi-slovo)
+7. [Znamenke (2)](README.md#7-znamenke-2)
 
 
 ## *1. Kašnjenje*
