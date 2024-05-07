@@ -2,7 +2,7 @@
 
 
 
-<!--                    KAŠNJENJE -->
+<!--                                                                                                    KAŠNJENJE -->
 
 <details>
   <summary><em>1. Kašnjenje</em></summary>
@@ -39,7 +39,7 @@ print(45 - int(input()))
 
 
 
-<!--                    IZBORI -->
+<!--                                                                                                                        IZBORI -->
 
 <details>
   <summary><em>2. Izbori</em></summary>
@@ -94,7 +94,7 @@ Je, isto je i program bi se isto i izvodio. Pitanje je jedino što je jasnije ne
 
 
 
-<!--                    INICIJALI -->
+<!--                                                                                                                        INICIJALI -->
 
 <details>
   <summary><em>3. Inicijali</em></summary>
@@ -188,7 +188,7 @@ print(zasticeni_podaci)
 
 
 
-<!--                    ZNAMENKE 1 -->
+<!--                                                                                                                        ZNAMENKE 1 -->
 
 <details>
   <summary><em>4. Znamenke (1)</em></summary>
@@ -271,7 +271,7 @@ Cijeli kod pogledaj [ovdje](https://github.com/oskozala/python-zadaci/blob/main/
 
 
 
-<!--                    SIGMA -->
+<!--                                                                                                                        SIGMA -->
 
 <details>
   <summary><em>5. Sigma</em></summary>
@@ -347,32 +347,62 @@ print(zbroj)
 
 
 
-<!--                    ZNAMENKE 2 -->
+<!--                                                                                                                        NAĐI SLOVO -->
 
 <details>
   <summary><em>6. Nađi slovo</em></summary>
   <hr />
 
-Rješenje slijedi naknadno... 😉
+Kad bi morali izbrojati koliko se na jednoj stranici teksta ponavlja slovo "a", kako bi to napravili?
 
-  <hr />
-</details>
+Najjednostavnije bi bilo krenuti čitati ispočetka i svaki put kad naiđemo na slovo "a", napravimo recku olovkom na komad papira pa ih na kraju zbrojimo.
 
+Ovo je primjer tzv.  _sekvencijalnog pretraživanja_, što znači da rečenicu provjeravamo slovo po slovo (točnije, znak po znak) i bilježimo koliko se određeno slovo ponavlja.
 
+Za početak nam trebaju tekst koji pretražujemo i slovo koje želimo naći u tom tekstu:
 
-<!--                    ZNAMENKE 2 -->
+```python
+tekst = input()
+slovo_za_pretrazivanje = input()
+```
 
-<details>
-  <summary><em>7. Znamenke (2)</em></summary>
-  <hr />
+Kao što smo to radili na papiru, tako ćemo i u kodu. Jedino što će nam recke brojiti jedna dobra stara varijabla, možemo je nazvati _nađeno_.
 
-U prethodnom zadatku imali smo zgodno ograničenje da uneseni broj mora imati točno tri znamenke.
+Koliko smo slova dosad izbrojali? Koliki je rezultat na počeku utakmice?
 
-Što se događa kad se to ograničenje ukloni? Kad uneseni broj može imati jednu ili šest ili pak tisuću znamenki?
+```python
+nadjeno = 0
+```
+
+Kako ćemo natjerati program da tekst čita znak po znak?
 
 Moramo se, naravno, poslužiti petljom.
 
-Koliko će krugova imati ta petlja? Onoliko koliko uneseni broj ima znamenaka, očito. 😏
+Koliko će krugova imati ta petlja? Onoliko koliko uneseni tekst ima znakova, očito. 😏
+
+Ukoliko tekst ima `6` znakova, onda su oni raspoređeni na pozicijama `0`, `1`, `2`, `3`, `4` i `5` pa nam treba jedna petlja koja će i "brojiti" po tim vrijednostima, npr:
+
+```python
+for i in range(6):
+```
+
+Varijabla `i` će tako krenuti od nule (pozicija prvog znaka) do pet (pozicija zadnjeg znaka) pa će nam samo "čitanje" teksta znak po znak biti jednostavno. Primjerice:
+
+```pycon
+>>> tekst = 'Kozala'
+>>> for i in range(6):
+...     print('Na poziciji', i, 'nalazi se slovo', tekst[i])
+...    
+Na poziciji 0 nalazi se slovo K
+Na poziciji 1 nalazi se slovo o
+Na poziciji 2 nalazi se slovo z
+Na poziciji 3 nalazi se slovo a
+Na poziciji 4 nalazi se slovo l
+Na poziciji 5 nalazi se slovo a
+>>>
+```
+
+Zasad odlično, no što ako ne znamo koliko će znakova tekst imati?
 
 Tu nam može pomoći funkcija `len()` (skraćeno od *length* - duljina).
 
@@ -383,6 +413,90 @@ Tu nam može pomoći funkcija `len()` (skraćeno od *length* - duljina).
 >>> len(skola)
 11
 ```
+
+Da ponovimo, onoliko koliko nam vrati funkcija `len()`, toliko će petlja imati krugova pa je možemo koristiti u postavljanju `for` petlje.
+
+```python
+for i in range(len(tekst)):
+```
+
+U nastavku moramo u svakom krugu provjeriti je li trenutni znak isti kao onaj koji smo unijeli na početku.
+
+Ako (`if`) je isti (`==`), stavimo recku (`nadjeno` se povećava za 1).
+
+Ako nije, nikom ništa (nije nam potreban `else`). 😃
+
+```python
+    if tekst[i] == slovo_za_pretrazivanje:
+        nadjeno += 1
+```
+
+Preostaje nam ispisati koliko je puta znak nađen ili poruku da nije (u formatu kao u primjerima):
+
+1. Dodajmo slovu navodnike:
+
+```python
+znak = '"' + slovo_za_pretrazivanje + '"'
+```
+
+2. Provjerimo je li slovo nađeno i ispišimo poruku:
+
+```python
+if nadjeno > 0:
+    print(znak, '-', nadjeno)
+else:
+    print(znak, '- nije nađeno')
+```
+
+_Usporedi ovaj način ispisivanja poruke s kodom u datoteci [nadji-slovo.py](https://github.com/oskozala/python-zadaci/blob/main/rjesenja/nadji-slovo.py)._
+
+
+### **_Alternativno rješenje_**
+
+Sad kad znamo sekvencijalno pretraživati, vrijeme je da se kaže da postoji i jednostavniji način "čitanja" teksta petljom, a da pritom ne moramo niti znati koliko tekst ima znakova.
+
+Uzmimo primjer od maloprije i usporedimo sa sljedećim:
+
+```pycon
+>>> tekst = 'Kozala'
+>>> for znak in tekst:
+...     print(znak)
+...    
+K
+o
+z
+a
+l
+a
+>>>
+```
+
+U tom smo slučaju izgubili brojčani brojač `i`, ali smo dobili znakovni brojač `znak`.
+
+Funkcija `len()` nam ovdje nije potrebna jer nakon kruga gdje `znak` postaje zadnji znak u varijabli `tekst`, petlja se sama prekida.
+
+```python
+for znak in tekst:
+    if znak == slovo_za_pretrazivanje:
+        nadjeno += 1
+```
+
+Jednostavno, zar ne?
+
+  <hr />
+</details>
+
+
+
+<!--                                                                                                                        ZNAMENKE 2 -->
+
+<details>
+  <summary><em>7. Znamenke (2)</em></summary>
+  <hr />
+
+U prijašnjem zadatku sa znamenkama imali smo zgodno ograničenje da uneseni broj mora imati točno tri znamenke.
+
+Što se događa kad se to ograničenje ukloni? Kad uneseni broj može imati jednu ili šest ili pak tisuću znamenki?
 
 Rješenje slijedi naknadno... 😉
 
