@@ -43,6 +43,7 @@ print(45 - int(input()))
 
 <details>
   <summary><em>2. Izbori</em></summary>
+  <hr />
 
 Pitajmo za početak korisnika da nam upiše koliko ima godina:
 
