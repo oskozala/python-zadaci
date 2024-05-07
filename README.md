@@ -73,7 +73,23 @@ Napiši program koji će zbrojiti prvih `n` prirodnih brojeva.
 ___
 
 
-## *6. Znamenke (2)*
+## *6. Nađi slovo*
+
+Unosimo jednu **riječ** ili **rečenicu**, zatim unesemo **slovo** za pretraživanje.
+
+Ako se slovo nalazi u riječi ili rečenici, program ispisuje koliko se puta slovo ponavlja.
+
+Ako toga slova nema, program ispisuje odgovarajuću poruku
+
+|         | **Primjer 1.**    | **Primjer 2.**        | **Primjer 3.**      |
+|--------:|:------------------|:----------------------|:--------------------|
+| *Ulaz*  | `Kozala`<br>`z`   | `Dobar dan.`<br>`a`   | `Rijeka`<br>`t`     |
+| *Izlaz* | `"z" - 1`         | `"a" - 2`             | `"t" - nije nađeno` |
+
+___
+
+
+## *7. Znamenke (2)*
 
 Napiši program koji će zbrojiti znamenke bilo kojeg prirodnog broja.
 
