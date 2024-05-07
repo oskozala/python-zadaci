@@ -350,7 +350,20 @@ print(zbroj)
 <!--                    ZNAMENKE 2 -->
 
 <details>
-  <summary><em>6. Znamenke (2)</em></summary>
+  <summary><em>6. Nađi slovo</em></summary>
+  <hr />
+
+Rješenje slijedi naknadno... 😉
+
+  <hr />
+</details>
+
+
+
+<!--                    ZNAMENKE 2 -->
+
+<details>
+  <summary><em>7. Znamenke (2)</em></summary>
   <hr />
 
 U prethodnom zadatku imali smo zgodno ograničenje da uneseni broj mora imati točno tri znamenke.
