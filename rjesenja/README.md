@@ -7,7 +7,22 @@
 <details>
   <summary><em>1. Kašnjenje</em></summary>
   <hr />
-  
+
+#### **_Problem_**
+Ana je zakasnila na sat. Napiši program koji će izračunati koliko je još Ani minuta ostalo do odmora.
+
+Pretpostavit ćemo da je Ana zakasnila `n` minuta, gdje vrijedi `0 < n < 45`.
+
+|         | **Primjer 1.** | **Primjer 2.** |
+|---------|----------------|----------------|
+| *Ulaz*  | `17`           | `34`           |
+| *Izlaz* | `28`           | `11`           |
+
+
+  <hr />
+
+#### **_Rješenje_**
+
 Krenimo od onoga što nam je poznato i onog što još ne znamo.
 
 **Poznat** nam je podatak da školski sat traje 45 minuta, pa će rješenje nedvojbeno biti `45 - n`, a kako nam program to mora ispisati, koristit ćemo funkciju `print()`.
@@ -44,6 +59,21 @@ print(45 - int(input()))
 <details>
   <summary><em>2. Izbori</em></summary>
   <hr />
+
+#### **_Problem_**
+
+Ivan nije siguran može li glasovati na izborima. Nitko mu nije objasnio da to u Hrvatskoj mogu samo punoljetne osobe.
+
+Napiši program koji će Ivanu ispisati poruku `GLASUJ` ukoliko je punoljetan, a u suprotnom neka mu se ispiše samo broj godina koliko još neće imati pravo glasa.
+
+|         | **Primjer 1.** | **Primjer 2.** |
+|---------|----------------|----------------|
+| *Ulaz*  | `12`           | `22`           |
+| *Izlaz* | `6`            | `GLASUJ`       |
+
+<hr />
+
+#### **_Rješenje_**
 
 Pitajmo za početak korisnika da nam upiše koliko ima godina:
 
@@ -100,6 +130,21 @@ Je, isto je i program bi se isto i izvodio. Pitanje je jedino što je jasnije ne
 <details>
   <summary><em>3. Inicijali</em></summary>
   <hr />
+
+#### **_Problem_**
+
+Napiši program koji će zaštititi nečije privatne podatke tako da mu se ime, prezime i godina rođenja prikažu u obliku inicijala i godina starosti u zagradama.
+
+*Za pravilni oblik ispisa pogledaj primjere.*
+
+|         | **Primjer 1.**               | **Primjer 2.**              |
+|---------|------------------------------|-----------------------------|
+| *Ulaz*  | `Luka`<br>`Modrić`<br>`1985` | `Mišo`<br>`Kovač`<br>`1941` |
+| *Izlaz* | `L.M. (39)`                  | `M.K. (83)`                 |
+
+<hr />
+
+#### **_Rješenje_**
 
 Kao što vidimo iz primjera, program nas mora pitati da unesemo tri podatka, jedan po jedan.
 
@@ -195,6 +240,19 @@ print(zasticeni_podaci)
   <summary><em>4. Znamenke (1)</em></summary>
   <hr />
 
+#### **_Problem_**
+
+Napiši program koji će zbrojiti znamenke bilo kojeg prirodnog troznamenkastog broja.
+
+|         | **Primjer 1.** | **Primjer 2.** |
+|---------|----------------|----------------|
+| *Ulaz*  | `124`          | `942`          |
+| *Izlaz* | `7`            | `15`           |
+
+  <hr />
+
+#### **_Rješenje_**
+
 Program nas pita da unesemo neki troznamenkasti broj, a naučili smo da se u Pythonu to radi ovako, zar ne?
 
 ```python
@@ -278,6 +336,19 @@ Cijeli kod pogledaj [ovdje](https://github.com/oskozala/python-zadaci/blob/main/
   <summary><em>5. Sigma</em></summary>
   <hr />
 
+#### **_Problem_**
+
+Napiši program koji će zbrojiti prvih `n` prirodnih brojeva.
+
+|         | **Primjer 1.** | **Primjer 2.** | **Primjer 3.** |
+|---------|----------------|----------------|----------------|
+| *Ulaz*  | `3`            | `7`            | `10`           |
+| *Izlaz* | `6`            | `28`           | `55`           |
+
+  <hr />
+
+#### **_Rješenje_**
+
 Kako bismo riješili ovaj zadatak napamet ili na papiru?
 
 Krenuli bi od početka, zbrajali broj po broj i pamtili (ili zapisivali) svaki rezultat, a zadnji rezultat je ujedno i konačno rješenje.
@@ -353,6 +424,23 @@ print(zbroj)
 <details>
   <summary><em>6. Nađi slovo</em></summary>
   <hr />
+
+#### **_Problem_**
+
+Unosimo jednu **riječ** ili **rečenicu**, zatim unesemo **slovo** za pretraživanje.
+
+Ako se slovo nalazi u riječi ili rečenici, program ispisuje koliko se puta slovo ponavlja.
+
+Ako toga slova nema, program ispisuje odgovarajuću poruku
+
+|         | **Primjer 1.**    | **Primjer 2.**        | **Primjer 3.**      |
+|--------:|:------------------|:----------------------|:--------------------|
+| *Ulaz*  | `Kozala`<br>`z`   | `Dobar dan.`<br>`a`   | `Rijeka`<br>`t`     |
+| *Izlaz* | `"z" - 1`         | `"a" - 2`             | `"t" - nije nađeno` |
+
+  <hr />
+
+#### **_Rješenje_**
 
 Kad bi morali izbrojati koliko se na jednoj stranici teksta ponavlja slovo "a", kako bi to napravili?
 
@@ -494,6 +582,19 @@ Jednostavno, zar ne?
 <details>
   <summary><em>7. Znamenke (2)</em></summary>
   <hr />
+
+  #### **_Problem_**
+
+Napiši program koji će zbrojiti znamenke bilo kojeg prirodnog broja.
+
+|         | **Primjer 1.** | **Primjer 2.** | **Primjer 3.** |
+|---------|----------------|----------------|----------------|
+| *Ulaz*  | `124`          | `2795`         | `10`           |
+| *Izlaz* | `7`            | `23`           | `1`            |
+  
+  <hr />
+
+#### **_Rješenje_**
 
 U prijašnjem zadatku sa znamenkama imali smo zgodno ograničenje da uneseni broj mora imati točno tri znamenke.
 
